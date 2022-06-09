@@ -1,2 +1,2 @@
 # JTDS
-This reporsitory is for the code of the paper Auxiliary Learning with Joint Task and Data Scheduling
+This reporsitory is for the code of the paper Auxiliary Learning with Joint Task and Data Scheduling, and the code is coming soon.
