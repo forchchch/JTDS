@@ -1,0 +1,3 @@
+bird_record/
+__pycache__/
+preprocess_data/*.json
