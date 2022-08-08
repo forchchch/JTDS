@@ -23,6 +23,13 @@ The joint scheduler is implemented with the auxilearn.hypernet.MonoJoint. The up
 
 ## Citation
 ```
-will be given after camera ready
+@inproceedings{chen2022auxiliary,
+title = {Auxiliary Learning with Joint Task and Data Scheduling},
+author = {Chen, Hong and Wang Xin, and Guan, Chaoyu and Liu, Yue and Zhu Wenwu},
+booktitle = {International Conference on Machine Learning},
+pages = {3634--3647},
+year = {2022},
+organization = {PMLR}
+}
 ```
 
