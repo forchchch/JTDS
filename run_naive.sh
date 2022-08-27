@@ -1,0 +1,1 @@
+CUDA_VISIBLE_DEVICES=0 python run_NJTDS.py --task_num 313 --epochs 100  --exp_name naive --whether_aux 1 --train_batch_size 64 --aux_weight 0.1 --main_lr 1e-4 --aux_lr 1e-2 --hyperstep 20 --corupted 0  --auxw_decay 5e-3 --n_meta_train_loss_accum 1 --corupted_rate 0.6

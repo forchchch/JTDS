@@ -5,6 +5,18 @@ from torch.nn.utils import weight_norm
 import torch
 import torch.nn.functional as F
 
+
+class Naive_hyper(nn.Module):
+    def __init__(self, data_num, task_num):
+        super(Naive_hyper, self).__init__()
+        self.weights = nn.Embedding(data_num, task_num)
+        self.nolinear = nn.Softplus()
+    
+    def forward(self, losses, sample_id):
+        current_weight = self.nolinear(self.weights(sample_id))
+        final_loss = ( (current_weight*losses).mean(0) ).sum()
+        return final_loss
+
 class Identity(nn.Module):
     def __init__(self, *args, **kwargs):
         super().__init__()
