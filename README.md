@@ -16,7 +16,11 @@ When you finish the data preprocessing process, you can run the script to reprod
 ```
 sh run_bilevel.sh
 ```
-Additionally, if you want to run the noisy setting, change the corrupted to 1 and set the corresponding corrupted ratio.
+Additionally, if you want to run the noisy setting, change the corrupted to 1 and set the corresponding corrupted ratio in the run_bilevel.sh(like the other examples in the command line).
+### Explanation for key configs
+    + corupted: 0 for clean setting, 1 for corrupted setting
+    + corupted ratio: the ratio for corupted labels
+    + method: common for learning with all tasks and data together, joint for our selection method
 
 ## Scheduler implementation and bilevel optimization
 The joint scheduler is implemented with the auxilearn.hypernet.MonoJoint. The upper level optimization process is shown in line 323- line376 in the train_bilevel.py.
