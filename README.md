@@ -26,13 +26,13 @@ Additionally, if you want to run the noisy setting, change the corrupted to 1 an
 The joint scheduler is implemented with the auxilearn.hypernet.MonoJoint. The upper level optimization process is shown in line 323- line376 in the train_bilevel.py.
 
 ## N-JTDS baseline
-If you want to run with the N-JTDS baseline, it needs the index of each sample, so the dataset will be a little different as in Bird_dataset_naive. To run this baselinel, please use the following command line:
+If you want to run with the N-JTDS baseline, it needs the index of each sample, so the dataset will be a little different，which is given in Bird_dataset_naive. To run this baseline, please use the following command line:
 ```
 sh run_naive.sh
 ```
 The configs are the same as before.
 ## The semi-supervised setting
-The semi-supervised setting depends on how you choose the data for the primary task. In our paper, we randomly choose 5 samples for each class and then generate a loss mask for the main task. You can generate the mask for the samples in the way you need.
+The semi-supervised setting depends on how you choose the data for the primary task. In our paper, we randomly choose 5 samples for each class and then generate a loss mask(1 for the sampled data, 0 for others) for the main task. You can generate the mask for the samples in the way you need. We do not incorporate this part in our released code, but it is not hard to implement this by little modification to the data_preprocess.py to choose the samples, and then according to the choosed samples to generate mask in the Bird_dataset.py, finally use the mask to weight the loss in the training procedure.
 
 ## Citation
 ```
